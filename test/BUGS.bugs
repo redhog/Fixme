@@ -1,0 +1,23 @@
+#### fixme ####
+general = True
+description = 'Murkmurk'
+name = 'bar'
+priority = 3
+#### end ####
+#### fixme ####
+general = True
+babajaga = 'jagar dig'
+bar = 'haha'
+description = 'Hej hopp alla barn'
+maskmak = 'blurb'
+name = 'foo'
+priority = 1
+#### end ####
+#### fixme ####
+general = True
+description = 'Blubba'
+muae = 15
+name = 'xx'
+priority = 2
+xxx = 'zzyzzz'
+#### end ####
