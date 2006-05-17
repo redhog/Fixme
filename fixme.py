@@ -101,7 +101,16 @@ class Fixmes(object):
                 line = line.split('#', 1)[1]
             line = line.strip()
             if line.startswith('FIXME: '):
-                self.insertFixme({'location':(path,linenr), 'description':line.split(':', 1)[1].strip()})
+                description = line.split(':', 1)[1].strip()
+                self.insertFixme({'location':(path,linenr), 'type':'fixme', 'name':description, 'description':description})
+                continue
+            elif line.startswith('TODO: '):
+                description = line.split(':', 1)[1].strip()
+                self.insertFixme({'location':(path,linenr), 'type':'todo', 'name':description, 'description':description})
+                continue
+            elif line.startswith('WHISH: '):
+                description = line.split(':', 1)[1].strip()
+                self.insertFixme({'location':(path,linenr), 'type':'whish', 'name':description, 'description':description})
                 continue
             elif line == "### fi" + "xme ####":
                 fixme = ''
